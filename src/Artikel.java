@@ -15,5 +15,4 @@ public class Artikel extends Media {
         System.out.println("artikeltekst = " + artikeltekst);
         System.out.println("billede = " + billede);
     }
-
 }
