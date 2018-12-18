@@ -10,6 +10,14 @@ public class Main {
          */
         Test.test();
 
+        Media consoleLogTest = new Media();
+        consoleLogTest.setName("TesterLigeMetoden");
+        consoleLogTest.setFileName("VirkerDenMon");
+        consoleLogTest.logToConsol();
+
+        Video consoleTest = new Video();
+        consoleTest.logToConsol();
+
     }
 }
 

@@ -20,6 +20,14 @@ public class Media {
         created = Date.from(Instant.now());
     }
 
+    public void logToConsol(){
+        System.out.println("klasse = Media");
+        System.out.println("assetId = " + assetId);
+        System.out.println("navn = " + name);
+        System.out.println("dato = " + created);
+        System.out.println("filnavn " + fileName);
+    }
+
     //Getters and setters for medieopretning
     public int getAssetId() {
         return assetId;
