@@ -1,11 +1,27 @@
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
 import java.io.File;
 
-public class Main {
+public class Main extends Application {
+
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("Sample.fxml"));
+        primaryStage.setTitle("MediaGui");
+        primaryStage.setScene(new Scene(root, 525, 275));
+        primaryStage.show();
+    }
 
     public static final String SOFTWARE_VERSION = "0.1.0";
     public static final String MEDIA_MAPPE = "media/";
 
     public static void main(String[] args) {
+
+        launch(args);
 
         /* Her køres test metoden i test klassen
         som her vil vise vores nye medie
@@ -61,7 +77,6 @@ public class Main {
             if (listOfFiles[i].isFile()) {
                 folderNavn = listOfFiles[i].getName();
                 System.out.println(folderNavn);
-
             }
         }
         return listOfFiles;

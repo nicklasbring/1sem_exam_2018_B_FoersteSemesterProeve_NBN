@@ -14,5 +14,4 @@ public class Billede extends Media {
         System.out.println("pixelHoejde = " + hoejde);
         System.out.println("fotografens navn = " + picFotografNavn);
     }
-
 }
