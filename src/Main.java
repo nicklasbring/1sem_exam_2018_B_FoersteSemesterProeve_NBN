@@ -5,6 +5,9 @@ public class Main {
 
     public static void main(String[] args) {
 
+        /* Her køres test metoden i test klassen
+        som her vil vise vores nye medie
+         */
         Test.test();
 
     }
