@@ -2,15 +2,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.input.DragEvent;
-import javafx.scene.input.MouseDragEvent;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.media.Media;
-
 import java.io.File;
 
 public class Controller {
-
 
     @FXML
     public TextField textField;
@@ -28,15 +22,14 @@ public class Controller {
         File folder = new File(path);
 
         //Her laver jeg et fil array med filerne fra den valgte sti
-        File[] filesFromPath = folder.listFiles();
+        File[] filesFromPath = Main.readMediaFolder(path);
 
-        //Her køerer jeg et for each loop der kører gennem alle filerne
+        //Her koerer jeg et for each loop der kører gennem alle filerne
         for (File file : filesFromPath) {
-            if (folder.isFile()) {
+            if (file.isFile()) {
                 textArea.appendText(file.getName() + "\n");
             }
         }
-
     }
 }
 
